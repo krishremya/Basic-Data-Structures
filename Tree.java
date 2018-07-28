@@ -1,5 +1,6 @@
 import java.util.*;
 
+/*This is to implement binary tree recursion.*/
 class Node {
   Node left;
   Node right;
@@ -26,11 +27,11 @@ class BinaryTree {
         node1.left = newNode;
       }
     } else {
-      if(node1.right !=null) {
+      if(node1.right != null) {
         insertTree(node1.right, data);
       } else {
         Node newNode = new Node(data);
-        node1.right= newNode;
+        node1.right = newNode;
       }
     }
     return ;
