@@ -2,10 +2,10 @@ import java.util.*;
 // Binary Tree implementation using array.
 class Tree {
 	int size;
-	int ar[] =  new int[10];;
+	int ar[] ;
 	Tree(int size) {
 		this.size = size;
-		
+		ar = new int[size];
 	}
 
 	void setRoot(int data) {
@@ -13,7 +13,7 @@ class Tree {
 	}
 
 	void setLeft(int data, int parent) {
-		if(ar[parent] == null) {
+		if(ar[parent] == 0) {
 			System.out.println("Invalid");
 			return;
 		}
@@ -26,7 +26,7 @@ class Tree {
 	}
 
 	void setRight(int data, int parent) {
-		if(ar[parent] == null) {
+		if(ar[parent] == 0) {
 			System.out.println("Invalid");
 			return;
 		}
@@ -39,10 +39,10 @@ class Tree {
 	}
 	public void printTree(int size){ 
         for (int i = 0; i < size; i++) { 
-            if (ar[i] != null) 
-                System.out.print(ar[i]+ " "); 
+            if (ar[i] != 0) 
+                System.out.print(ar[i]+" "); 
             else 
-            	System.out.print("_");
+            	System.out.print("_"+" ");
     	} 
     }
 }
@@ -55,9 +55,9 @@ class BinaryTree {
 		T.setRoot(1);
 		T.setLeft(2,0);
 		T.setRight(5,0);
-		T.setLeft(20,0);
-		T.setRight(10,0);
-		T.setLeft(23,0);
+		T.setLeft(20,1);
+		T.setRight(10,1);
+		T.setLeft(23,3);
 		T.printTree(size);
 	}
 }
