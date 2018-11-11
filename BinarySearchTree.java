@@ -20,7 +20,7 @@ class Tree {
   }
 
   void insertTree(Node node, int data) {
-    if(node.data < data) {
+    if(node.data > data) {
       if(node.left != null) {
         insertTree(node.left, data);
       } else {
